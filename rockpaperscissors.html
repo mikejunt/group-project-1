@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RPS Game</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RockPaperScissorsBMS</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        margin: 15px auto;
+        border: 2px solid black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="selection">
+    <div id="rock">Rock</div>
+    <div id="paper">Paper</div>
+    <div id="scissors">Scissors</div>
+
+    <script>
+      //querySelectorAll("selection')??
+
+      document.getElementById("rock").addEventListener("click", function() {
+        console.log("rock");
+      });
+      document.getElementById("paper").addEventListener("click", function() {
+        console.log("paper");
+      });
+
+      document.getElementById("scissors").addEventListener("click", function() {
+        console.log("scissors");
+      });
+    </script>
+  </body>
 </html>
