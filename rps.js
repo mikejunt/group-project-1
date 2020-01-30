@@ -23,11 +23,28 @@ function game(x, y, z) {
 }
 
 // function that executes results of a win
-function wingame(outcome = "") { wincounter++; writegame(); writewin(); newgametext(); resulttext(outcome); console.log("win") }
+function wingame(outcome = "") {
+    wincounter++;
+    writegame();
+    writewin();
+    newgametext();
+    resulttext(outcome);
+    console.log("win from wingame")
+}
 // function that executes results of a loss
-function losegame(outcome = "") { writegame(); newgametext(); resulttext(outcome); console.log("loss") }
+function losegame(outcome = "") {
+    writegame();
+    newgametext();
+    resulttext(outcome);
+    console.log("loss from losegame")
+}
 // function that executes results of a tie
-function tiegame(outcome = "") { writegame(); newgametext(); resulttext(outcome); console.log("draw") }
+function tiegame(outcome = "") {
+    writegame();
+    newgametext();
+    resulttext(outcome);
+    console.log("draw from tiegame")
+}
 
 
 // function writes games played counter to page
@@ -49,30 +66,39 @@ function writewin() { document.getElementById('wincount').innerText = `${wincoun
 function resulttext(outcome) {
     let changetext = document.getElementById("results");
     if (outcome == "win") {
-        console.log("WIN")
+        console.log("WIN from resulttext");
         changetext.innerText = "Congratulations! You won!"
     }
     else if (outcome == "loss") {
-        console.log("LOSS")
+        console.log("LOSS from resulttext");
         changetext.innerText == "Sorry, you lost."
     }
     else {
-        console.log("DRAW")
+        console.log("DRAW from resulttext");
         changetext.innerText == "It's a tie, try again."
     }
 }
 
 
-function newgametext(outcome) {
-    let newgame = document.getElementById("newgame")
-    if (outcome == "win") {
-        newgame.innerText = "Click here to play again!"
-    }
-    if (outcome == "loss") {
-        newgame.innerText = "Click here to play again!"
-    }
-    if (outcome == "tie") {
-        newgame.innerText = "Click here to play again!"
-    }
+// function newgametext(outcome) {
+//     let newgame = document.getElementById("newgame")
+//     if (outcome == "win") {
+//         newgame.innerText = "Click here to play again!";
+//         console.log("win from newgametext")
+//     }
+//     if (outcome == "loss") {
+//         newgame.innerText = "Click here to play again!";
+//         console.log("loss from newgametext")
+//     }
+//     if (outcome == "tie") {
+//         newgame.innerText = "Click here to play again!";
+//         console.log("tie from newgametext")
+//     }
 
+// }
+
+function newgametext(outcome) {
+    let newgame = document.getElementById("newgame");
+    newgame.innerText = "Click to play again!";
+    console.log("newgame text has worked")
 }

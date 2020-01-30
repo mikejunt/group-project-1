@@ -21,6 +21,8 @@
     width: 100%;
     height: 50px;
     font-size: 25px;
+    justify-content: space-around;
+    margin: auto;
 }
 .rock {
     background-color: darkslategrey;
